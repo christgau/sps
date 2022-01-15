@@ -1,0 +1,187 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://sports.s14u.de/racingmode.schema.json",
+    "title": "progression system",
+    "description": "A progression system describes how competitors, i.e. crews, teams, individual athletes, in a sport event (aka 'discipline') move from phase to phase (aka 'rounds'). Such a description also allows to derive the number and types of units (aka 'races' or 'heats') for a given phase.",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "The name of the system as it is commonly referred to, e.g. in rules."
+        },
+        "sport": {
+            "type": "string",
+            "description": "The name of the sport to which the system applies to. Recognized standard names of the sport should be used."
+        },
+        "description": {
+            "type": "string",
+            "description": "A more detailed description, e.g., when to use this system."
+        },
+        "version": {
+            "type": "string",
+            "description": "Some kind of version number."
+        },
+        "capacity": {
+            "type": "integer",
+            "description": "Regular number of lanes or starting positions for that progression system, e.g. nine for athletics"
+        },
+        "authors": {
+            "type": "array",
+            "description": "List of peoples (with optional e-mail address), e.g. John Doe <john.doe@example.com>",
+            "items": { 
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "ranges": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/range" }
+        }
+    },
+    "required": ["title", "sport", "ranges"],
+    "$defs": {
+        "range": {
+            "description": "The progression system may depend on the number of competitors which are expressed with multiple ranges inside the document.",
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Inclusive starting value from which on the range applies."
+                },
+                "to": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Inclusive starting value from which on the range applies."
+                },
+                "phases": {
+                    "type": "array",
+                    "items": { "$ref": "#/$defs/phase" },
+                    "minItems": 1
+                }
+            },
+            "required": [ "from" ]
+        },
+        "phase": {
+            "description": "A phase is a stage or round in a sport event. There might be a qualification and final, or there might be heats, semi-finals, finals and so on.",
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "A human-readable name of the phase, like 'Qualification', 'Round of 32', or 'Quarterfinals'."
+                },
+                "code": {
+                    "type": "string",
+                    "description": "An identifier value that makes sense in some other system, e.g. in RCS it might be 'FNL' (padding '-' removed) for the 'Finals' round."
+                },
+                "order": {
+                    "type": "integer",
+                    "description": "A value that might be used for sorting the phases. If no value is supplied, the phases should be considered in their appearance order where finals should come last."
+                },
+                "units": {
+                    "type": "array",
+                    "items": { "$ref": "#/$defs/unit" },
+                    "minItems": 1
+                }
+            },
+            "required": [ "label", "code", "units" ]
+        },
+        "unit": {
+            "description": "A fraction of a phase, e.g. an individual heat of the qualification round, or one of two semifinals",
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "The long description of the unit, e.g. 'Heat 1' or 'Final B'."
+                },
+                "code": {
+                    "type": "string",
+                    "description": "The short description of the unit, e.g. 'H1' or 'FB'. It must be unique among all units to be used as a reference in the rules"
+                },
+                "order": {
+                    "type": "integer",
+                    "description": "A value to sort the different units. If no order is provided, the order should be determined from the order of appearance."
+                },
+                "ruleTexts": {
+                    "type": "object",
+                    "description": "A short and long textual summary of the qualification rules, e.g. '1-4 to Final A, Remainers to Final B' and '1-4 -> FA, 5-... -> FB'.",
+                    "properties": {
+                        "short": { "type": "string" },
+                        "long": { "type": "string" }
+                    }
+                },
+                "rules": {
+                    "type": "array",
+                    "description": "A list of rules which specify which competitors from other (or the same) round qualify for the unit.",
+                    "items": { "$ref": "#/$defs/rule" }
+                },
+                "subunits": {
+                    "type": "array",
+                    "items": { "$ref": "#/$defs/subunit" }
+                }
+            },
+            "required": [ "label", "code" ]
+        },
+        "subunit": {
+            "type": "object",
+            "description": "Further distinction within a unit, like one of several matches for same pair of teams (play-offs)",
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "order": {
+                    "type": "integer"
+                }
+            }
+        },
+        "rule": {
+            "type": "object",
+            "description": "A single rule that specifies the progression of one or multiple competitors from a phase and possibly unit (pull approach).",
+            "properties": {
+                "option": {
+                    "type": "integer",
+                    "description": "Multiple variants of a ruleset might be supplied, which are distinguished by their option number",
+                    "default": 0
+                },
+                "order": {
+                    "type": "integer",
+                    "description": "Order of significance of the rules, lower values mean higher priorities. This may be used to indicate the ranking of qualified competitors from previous rounds. Rules may be applied in the order specified by this argument."
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Reference to a phase or unit with that code from which the competitor should be selected."
+                },
+                "criteria": {
+                    "type": "array",
+                    "description": "A list of criteria that _all_ have to apply to the competitors from source in order to proceed to the current unit.",
+                    "items": { "$ref": "#/$defs/ruleCriterion" }
+                },
+                "qcode": {
+                    "type": "string",
+                    "description": "A short string/abbrevation that is used as marker for qualified competitors, e.h. 'Q' for directly qualified ones and 'q' for lucky loosers, or 'F' for competititors that reached the final(s)."
+                }
+            },
+            "required": [ "criteria" ]
+        },
+        "ruleCriterion": {
+            "type": "object",
+            "properties": {
+                "select": {
+                    "type": "string",
+                    "description": "The value that the value (see below) is compared with using the provided relationship (see below as well). The interpretation of that value is out of the scope of this spec."
+                },
+                "rel": { "enum": ["<", "<=", "=", ">=", ">", "<>"], "default": "=" },
+                "value": {
+                    "oneOf": [
+                        { "type": "string" },
+                        { "type": "number" }
+                      ]
+                }
+            },
+            "required": [ "select", "value" ]
+        }
+    }
+}
