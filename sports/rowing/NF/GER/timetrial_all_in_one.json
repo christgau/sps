@@ -1,0 +1,20 @@
+{
+    "title": "Langstrecke",
+    "sport": "Rowing",
+    "description": "System für Langstreckenrennen. Alle Boote (auch ein einzelnes) starten in einem Final-/Hauptrennen",
+    "version": "1.0",
+    "ranges": [
+        {
+            "from": 1,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "R", "label": "Hauptrennen" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

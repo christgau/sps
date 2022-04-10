@@ -1,0 +1,281 @@
+{
+    "title": "AWB 5 Bahnen, Vorläufe",
+    "sport": "Rowing",
+    "version": "2000",
+    "description": "System für Rennen auf 4 Bahnen mit Vorläufen und direkter Qualifikation für ein Finale (RWR Anhang C)",
+    "capacity": 5,
+    "ranges": [
+        {
+            "from": 2,
+            "to": 5,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "R", "label": "Hauptrennen", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 6,
+            "to": 6,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1-2 -> F, 3 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1-2 -> F, 3 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V1", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 4, "source": "V2", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 5, "source": "HEAT", "criteria": [    { "select": "rev_unit_rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 7,
+            "to": 7,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1-3 -> F" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1-2 -> F" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V1", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 4, "source": "V2", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 5, "source": "V1", "criteria": [    { "select": "rank", "value": 3 } ] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 8,
+            "to": 8,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1-2 -> F" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1-2 -> F" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "V1", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 5, "source": "V2", "criteria": [    { "select": "rank", "value": 2 } ] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 9,
+            "to": 9,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1-2 -> F, 3 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1-2 -> F, 3 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V1", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 4, "source": "V2", "criteria": [    { "select": "rank", "value": 2 } ] },
+                                { "option": 1, "order": 5, "source": "HEAT", "criteria": [    { "select": "rev_unit_rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 10,
+            "to": 11,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "HEAT", "criteria": [    { "select": "rev_unit_rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 12,
+            "to": 12,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V4", "label": "Vorlauf 4", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "V4", "criteria": [    { "select": "rank", "value": 1 } ] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 13,
+            "to": 13,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V4", "label": "Vorlauf 4", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "V4", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 5, "source": "HEAT", "criteria": [    { "select": "rev_unit_rank", "value": 2 }, { "select": "time_rank", "value": 1 }] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 14,
+            "to": 14,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F, 2 -> F or OUT" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "HEAT", "criteria": [    { "select": "rev_unit_rank", "value": 2 }, { "select": "time_rank", "value": 1 }] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 15,
+            "to": 15,
+            "phases": [
+                {
+                    "label": "Vorläufe",
+                    "code": "HEAT",
+                    "units": [
+                        { "code": "V1", "label": "Vorlauf 1", "ruleTexts": { "short": "1 -> F" }, "rules": [] },
+                        { "code": "V2", "label": "Vorlauf 2", "ruleTexts": { "short": "1 -> F" }, "rules": [] },
+                        { "code": "V3", "label": "Vorlauf 3", "ruleTexts": { "short": "1 -> F" }, "rules": [] },
+                        { "code": "V4", "label": "Vorlauf 4", "ruleTexts": { "short": "1 -> F" }, "rules": [] },
+                        { "code": "V5", "label": "Vorlauf 5", "ruleTexts": { "short": "1 -> F" }, "rules": [] }
+                    ]
+                },
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "F", "label": "Finale", "rules": [
+                                { "option": 1, "order": 1, "source": "V1", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 2, "source": "V2", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 3, "source": "V3", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 4, "source": "V4", "criteria": [    { "select": "rank", "value": 1 } ] },
+                                { "option": 1, "order": 5, "source": "V5", "criteria": [    { "select": "rank", "value": 1 } ] }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

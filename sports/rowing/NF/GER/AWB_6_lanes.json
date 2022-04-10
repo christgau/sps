@@ -1,0 +1,184 @@
+{
+    "title": "AWB 6 Bahnen",
+    "sport": "Rowing",
+    "version": "2000",
+    "description": "System für Abteilungen auf 3 Bahnen",
+    "capacity": 6,
+    "ranges": [
+        {
+            "from": 2,
+            "to": 6,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "R", "label": "Hauptrennen", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 7,
+            "to": 12,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 13,
+            "to": 18,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 19,
+            "to": 24,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 25,
+            "to": 30,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 31,
+            "to": 36,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] },
+                        { "code": "A6", "label": "Abteilung 6", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 37,
+            "to": 42,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] },
+                        { "code": "A6", "label": "Abteilung 6", "rules": [] },
+                        { "code": "A7", "label": "Abteilung 7", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 43,
+            "to": 48,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] },
+                        { "code": "A6", "label": "Abteilung 6", "rules": [] },
+                        { "code": "A7", "label": "Abteilung 7", "rules": [] },
+                        { "code": "A8", "label": "Abteilung 8", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 49,
+            "to": 54,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] },
+                        { "code": "A6", "label": "Abteilung 6", "rules": [] },
+                        { "code": "A7", "label": "Abteilung 7", "rules": [] },
+                        { "code": "A8", "label": "Abteilung 8", "rules": [] },
+                        { "code": "A9", "label": "Abteilung 9", "rules": [] }
+                    ]
+                }
+            ]
+        },
+        {
+            "from": 55,
+            "to": 60,
+            "phases": [
+                {
+                    "label": "Finals",
+                    "code": "FNL",
+                    "units": [
+                        { "code": "A1", "label": "Abteilung 1", "rules": [] },
+                        { "code": "A2", "label": "Abteilung 2", "rules": [] },
+                        { "code": "A3", "label": "Abteilung 3", "rules": [] },
+                        { "code": "A4", "label": "Abteilung 4", "rules": [] },
+                        { "code": "A5", "label": "Abteilung 5", "rules": [] },
+                        { "code": "A6", "label": "Abteilung 6", "rules": [] },
+                        { "code": "A7", "label": "Abteilung 7", "rules": [] },
+                        { "code": "A8", "label": "Abteilung 8", "rules": [] },
+                        { "code": "A9", "label": "Abteilung 9", "rules": [] },
+                        { "code": "A10", "label": "Abteilung 10", "rules": [] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
