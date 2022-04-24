@@ -1,0 +1,776 @@
+{
+  "title": "DRV Meisterschaften 5 Bahnen",
+  "sport": "Rowing",
+  "version": "2006",
+  "description": "Meisterschaftssystem für fünf Bahnen (Sprint)",
+  "capacity": 5,
+  "ranges": [
+    {
+      "from": 1,
+      "to": 5,
+      "phases": [
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1 -> F, 2-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1 -> F, 2-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "H", "label": "Hoffnungslauf", "ruleTexts": { "short": "1-3 -> F" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "H", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "H", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "H", "criteria": [  { "select": "rank", "value": 3 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1-2 -> F, 3-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1-2 -> F, 3-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "H", "label": "Hoffnungslauf", "ruleTexts": { "short": "1 -> F" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "H", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1 -> FA, 3-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1 -> FA, 3-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1 -> FA, 3-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1 -> FA, 2-3 -> FB" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1 -> FA, 2-3 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "HB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "HA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 3 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 12,
+      "to": 15,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1-2 -> HF" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1-2 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 5, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Halbfinals",
+          "code": "SFNL",
+          "units": [
+            { "code": "SA", "label": "Halbfinale A", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 2 } ] }
+              ]
+            },
+            { "code": "SB", "label": "Halbfinale B", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "SA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "SB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "SA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "SB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 2 }] },
+                { "option": 1, "order": 2, "source": "SA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "SB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "SA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "SB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] },
+            { "code": "VD", "label": "Vorlauf D", "ruleTexts": { "short": "1-2 -> HF, 3-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Halbfinals",
+          "code": "SFNL",
+          "units": [
+            { "code": "SA", "label": "Halbfinale A", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            },
+            { "code": "SB", "label": "Halbfinale B", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 5, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "SA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "SB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "SA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "SB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 2 }] },
+                { "option": 1, "order": 2, "source": "SA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "SB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "SA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "SB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 19,
+      "to": 19,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VD", "label": "Vorlauf D", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1-2 -> HF" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1-2 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HC", "label": "Hoffnungslauf C", "ruleTexts": { "short": "1-2 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Halbfinals",
+          "code": "SFNL",
+          "units": [
+            { "code": "SA", "label": "Halbfinale A", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] }
+              ]
+            },
+            { "code": "SB", "label": "Halbfinale B", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 5, "source": "HA", "criteria": [  { "select": "rank", "value": 2 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "SA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "SB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "SA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "SB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 2 }] },
+                { "option": 1, "order": 2, "source": "SA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "SB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "SA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "SB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 20,
+      "to": 25,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VD", "label": "Vorlauf D", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VE", "label": "Vorlauf E", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VE", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VE", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HC", "label": "Hoffnungslauf C", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HD", "label": "Hoffnungslauf D", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VE", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HE", "label": "Hoffnungslauf E", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VE", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Halbfinals",
+          "code": "SFNL",
+          "units": [
+            { "code": "SA", "label": "Halbfinale A", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            },
+            { "code": "SB", "label": "Halbfinale B", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HE", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HE", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "SA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "SB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "SA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "SB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 2 }] },
+                { "option": 1, "order": 2, "source": "SA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "SB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "SA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "SB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "from": 26,
+      "to": 0,
+      "phases": [
+        {
+          "label": "Vorläufe",
+          "code": "HEAT",
+          "units": [
+            { "code": "VA", "label": "Vorlauf A", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VB", "label": "Vorlauf B", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VC", "label": "Vorlauf C", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VD", "label": "Vorlauf D", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VE", "label": "Vorlauf E", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] },
+            { "code": "VF", "label": "Vorlauf F", "ruleTexts": { "short": "1 -> HF, 2-.. -> H" }, "rules": [] }
+          ]
+        },
+        {
+          "label": "Hoffnungsläufe",
+          "code": "REP",
+          "units": [
+            { "code": "HA", "label": "Hoffnungslauf A", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VF", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VF", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VE", "criteria": [  { "select": "rank", "value": 4 } ] }
+              ]
+            },
+            { "code": "HB", "label": "Hoffnungslauf B", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VF", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 2, "order": 1, "source": "VB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 3, "source": "VD", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VF", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VA", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HC", "label": "Hoffnungslauf C", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VD", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 3, "source": "VA", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VC", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            },
+            { "code": "HD", "label": "Hoffnungslauf D", "ruleTexts": { "short": "1 -> HF" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 3, "source": "VF", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 1, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 5, "source": "VE", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 1, "source": "VF", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 2, "order": 2, "source": "VC", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 3 } ] },
+                { "option": 2, "order": 4, "source": "VA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 2, "order": 5, "source": "VB", "criteria": [  { "select": "rank", "value": 4 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Halbfinals",
+          "code": "SFNL",
+          "units": [
+            { "code": "SA", "label": "Halbfinale A", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VE", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            },
+            { "code": "SB", "label": "Halbfinale B", "ruleTexts": { "short": "1-2 -> FA, 3 -> FA or FB, 4-5 -> FB" }, "rules": [
+
+                { "option": 1, "order": 1, "source": "VD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "VE", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "VF", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 4, "source": "HC", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 5, "source": "HD", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 1, "source": "VA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 2, "source": "VB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 3, "source": "VF", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 4, "source": "HA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 2, "order": 5, "source": "HD", "criteria": [  { "select": "rank", "value": 1 } ] }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Finals",
+          "code": "FNL",
+          "units": [
+            { "code": "F", "label": "Finale", "rules": [
+
+                { "option": 1, "order": 1, "source": "SA", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 2, "source": "SB", "criteria": [  { "select": "rank", "value": 1 } ] },
+                { "option": 1, "order": 3, "source": "SA", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 4, "source": "SB", "criteria": [  { "select": "rank", "value": 2 } ] },
+                { "option": 1, "order": 5, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 1 }] }
+              ]
+            },
+            { "code": "F", "label": "Finale", "rules": [
+                { "option": 1, "order": 1, "source": "SFNL", "criteria": [  { "select": "rank", "value": 3 }, { "select": "time_rank", "value": 2 }] },
+                { "option": 1, "order": 2, "source": "SA", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 3, "source": "SB", "criteria": [  { "select": "rank", "value": 4 } ] },
+                { "option": 1, "order": 4, "source": "SA", "criteria": [  { "select": "rank", "value": 5 } ] },
+                { "option": 1, "order": 5, "source": "SB", "criteria": [  { "select": "rank", "value": 5 } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
